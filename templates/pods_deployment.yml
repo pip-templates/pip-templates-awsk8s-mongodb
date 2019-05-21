@@ -1,0 +1,32 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  namespace: <%=k8s_namespace%>
+  name: <%=microservice_name%>-deploy
+spec:
+  replicas: 1
+  minReadySeconds: 5
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: <%=microservice_name%>
+    spec: 
+      containers:
+      - name: <%=microservice_name%>-pod
+        image: <%=microservice_image%>:<%=env_baseline%>
+        ports:
+        - containerPort: 8080
+        env:
+        - name: EXAMPLE_ENV_VARIABLE
+          valueFrom:
+            configMapKeyRef:
+              name: <%=k8s_namespace%>-config
+              key: example_env_variable
+      imagePullSecrets:
+      - name: gitlab-docker-registry
