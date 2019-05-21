@@ -5,3 +5,4 @@ if ($path -eq "") { $path = "." }
 . "$($path)/config.ps1"
 . "$($path)/defaults.ps1"
 . "$($path)/templates.ps1"
+. "$($path)/mongocloud.ps1"
