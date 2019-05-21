@@ -16,7 +16,6 @@ if ($rootPath -eq "") { $rootPath = "." }
 
 . "$($rootPath)/cloud/install_k8s.ps1" $ConfigPath
 . "$($rootPath)/cloud/install_mongo.ps1" $ConfigPath
-. "$($rootPath)/cloud/peer_mgmt.ps1" $ConfigPath
 . "$($rootPath)/cloud/configure_k8s.ps1" $ConfigPath
 . "$($rootPath)/cloud/peer_mongo.ps1" $ConfigPath
 . "$($rootPath)/common/install_k8s_components.ps1" $ConfigPath $Baseline
