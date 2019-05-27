@@ -32,6 +32,7 @@
     "mongo_access_key": "XXX",
     "mongo_org_name": "pip-devs",
     "mongo_group_name": "pip-devs-example",
+    "mongo_cluster_name": "pip-devs-template",
     "mongo_shards": 1,
     "mongo_size": 1,
     "mongo_instance_type": "M2",
