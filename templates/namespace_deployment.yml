@@ -1,7 +1,0 @@
----
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: <%=k8s_namespace%>
-  labels:
-    app: <%=k8s_namespace%>

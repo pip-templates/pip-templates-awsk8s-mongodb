@@ -4,30 +4,12 @@
     "aws_access_key": "XXX",
     "aws_region": "us-east-1",
 
-    "env_name": "test.templates.com",
     "env_network_cidr": "10.9.0.0/21",
-    "env_ssh_key": "~/.ssh/id_rsa",
-
-    "k8s_version": "1.9.11",
-    "k8s_s3_store": "s3://test.templates.com",
-    "k8s_dns_zone": "test.templates.com",
-    "k8s_master_zones": [ "us-east-1a" ],
-    "k8s_node_zones": [ "us-east-1a" ],
-    "k8s_master_count": 1,
-    "k8s_node_count": 1,
-    "k8s_instance_type": "t2.medium",
-    "k8s_dashboard_enabled": true,
-
-    "k8s_namespace": "templates-devs",
 
     "mgmt_vpc": "vpc-xxx",
     "mgmt_network_cidr": "10.0.0.0/24",
 
-    "dashboard_enabled": true,
-    "log_enabled": false,
-    "metrics_enabled": false,
-
-    "mongo_enabled": false,
+    "mongo_enabled": true,
     "mongo_access_id": "somebody@somewhere.com",
     "mongo_access_key": "XXX",
     "mongo_org_name": "pip-devs",
@@ -39,12 +21,6 @@
     "mongo_db": "tracker",
     "mongo_user": "positron",
     "mongo_pass": "positron#123",
-    "mongo_restore": "mongo_data",
-    "mongo_backup": false,
-    "mongo_network_cidr": "10.2.0.0/21",
-
-    "docker_registry": "https://docker.registry.address",
-    "docker_user": "pip-templates",
-    "docker_pass": "XXX",
-    "docker_email": "piptemplates@gmail.com"
+    "mongo_backup": true,
+    "mongo_network_cidr": "10.2.0.0/21"
 }
