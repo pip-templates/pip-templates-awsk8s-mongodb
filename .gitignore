@@ -1,6 +1,0 @@
-
-/config/*
-!/config/*config.example*
-
-/temp
-!/temp/dummy.txt
