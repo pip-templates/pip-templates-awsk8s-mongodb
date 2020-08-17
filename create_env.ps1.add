@@ -1,0 +1,13 @@
+# Create mongo cluster
+. "$($rootPath)/src/install_db.ps1" $ConfigPath
+# Check for error
+if ($LastExitCode -ne 0) {
+    Write-Error "Can't create mongo cluster. Watch logs above."
+}
+
+# Peer mongo 
+. "$($rootPath)/src/peer_db.ps1" $ConfigPath
+# Check for error
+if ($LastExitCode -ne 0) {
+    Write-Error "Can't peer mongo cluster. Watch logs above."
+}
