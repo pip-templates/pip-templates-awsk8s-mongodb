@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # Install AWS Cli
 brew install awscli
 
