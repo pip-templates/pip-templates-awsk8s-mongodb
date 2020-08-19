@@ -1,46 +1,18 @@
 # Overview
-Scriptable databases introduce “infrastructure as a code” into devops practices. Scripts for install cloud mongo cluster.
 
-# Syntax
-All sripts have one required parameter - *$ConfigPath*. This is the path to config, path can be absolute or relative. 
+This is a built-in module to environment [pip-templates-env-master](https://github.com/pip-templates/pip-templates-env-master). 
+This module stores scripts for management cloud mongodb cluster.
 
-**Examples of installing aks**
-Relative path example (you should be in *piptemplates-devops-envmgmt* folder):
-`
-./cloud/install_mongo.ps1 ./config/cloud_config.json
-`
-Absolute path example:
-`
-~/pip-templates-mongodb-cloud/cloud/install_mongo.ps1 ~/pip-templates-mongodb-cloud/config/cloud_config.json
-`
+# Usage
 
-**Example delete script**
-`
-./cloud/destroy_mongo.ps1 ./config/cloud_config.json
-`
+- Download this repository
+- Copy *src*, *lib* and *templates* folder to master template
+- Add content of *.ps1.add* files to correspondent files from master template
+- Add content of *config/config.mongo.json.add* to json config file from master template and set the required values
 
-Also you can install environment using single script:
-`
-./create_env.ps1 ./config/cloud_config.json
-`
+# Config parameters
 
-Delete whole environment:
-`
-./delete_env.ps1 ./config/cloud_config.json
-`
-
-If you have any problem with not installed tools - use `install_prereq_` script for you type of operation system.
-
-# Project structure
-| Folder | Description |
-|----|----|
-| Cloud | Scripts related to management cloud environment. | 
-| Config | Config files for scripts. Store *example* configs for each environment, recomendation is not change this files with actual values, set actual values in duplicate config files without *example* in name. Also stores *resources* files, created automaticaly. | 
-| Lib | Scripts with support functions like working with configs, templates etc. | 
-
-### Cloud mongo
-
-* Cloud mongo config parameters
+Config variables description
 
 | Variable | Default value | Description |
 |----|----|---|
