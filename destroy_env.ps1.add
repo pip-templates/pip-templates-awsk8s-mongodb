@@ -1,12 +1,12 @@
 # Unpeer mongo 
-. "$($rootPath)/src/unpeer_mongo.ps1" $ConfigPath
+. "$($rootPath)/src/unpeer_db.ps1" $ConfigPath
 # Check for error
 if ($LastExitCode -ne 0) {
     Write-Error "Can't unpeer mongo cluster. Watch logs above."
 }
 
 # Destroy mongo cluster
-. "$($rootPath)/src/destroy_mongo.ps1" $ConfigPath
+. "$($rootPath)/src/destroy_db.ps1" $ConfigPath
 # Check for error
 if ($LastExitCode -ne 0) {
     Write-Error "Can't destroy mongo cluster. Watch logs above."
